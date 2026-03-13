@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Support — Skinsera</title>
+  <meta name="description" content="Skinsera support and FAQ." />
+  <style>
+    :root {
+      --bg: #0A0A0C;
+      --bg-elevated: #111114;
+      --bg-card: #16161A;
+      --accent: #E85A1B;
+      --text: #FFFFFF;
+      --text-muted: #9CA3AF;
+      --border: #27272A;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+    .container { width: min(900px, 92%); margin: 0 auto; }
+    nav { position: sticky; top: 0; background: rgba(10,10,12,0.85); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); }
+    .nav-inner { display:flex; justify-content:space-between; align-items:center; padding: 14px 0; }
+    .logo { color: var(--text); font-weight: 800; text-decoration:none; letter-spacing: 0.5px; }
+    .btn { background: var(--text); color: var(--bg); text-decoration:none; padding: 10px 16px; border-radius: 10px; font-weight: 600; }
+    main { padding: 56px 0 72px; }
+    h1 { font-size: clamp(2rem, 4vw, 2.6rem); margin-bottom: 10px; }
+    h2 { margin-top: 26px; margin-bottom: 8px; font-size: 1.2rem; }
+    p { color: var(--text-muted); }
+    .card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 24px; margin-top: 20px; }
+    .faq-item { margin-bottom: 20px; }
+    footer { border-top: 1px solid var(--border); padding: 30px 0; }
+    .footer-inner { display:flex; justify-content:space-between; align-items:center; flex-wrap: wrap; gap: 14px; }
+    .footer-links { display:flex; gap: 20px; }
+    .footer-links a { color: var(--text-muted); text-decoration:none; }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="container nav-inner">
+      <a href="/" class="logo">SKINSERA</a>
+      <a href="/" class="btn">Back to Home</a>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container">
+      <h1>Support</h1>
+      <p>Need help with Skinsera? Start with these FAQs.</p>
+
+      <div class="card">
+        <div class="faq-item">
+          <h2>1) How does the skin score work?</h2>
+          <p>Skinsera’s AI analyzes your daily photo across five zones: texture, clarity, oiliness, redness, and consistency. Your score is on a 0–100 scale, and a lower score means better skin.</p>
+        </div>
+
+        <div class="faq-item">
+          <h2>2) Why does my score go up sometimes?</h2>
+          <p>Scores can fluctuate due to lighting, natural skin changes, and lifestyle variation. Focus on your trend over 2+ weeks instead of day-to-day movement.</p>
+        </div>
+
+        <div class="faq-item">
+          <h2>3) How do I delete my data?</h2>
+          <p>In the app, go to Settings → Account → Delete Account. All data is permanently deleted within 30 days.</p>
+        </div>
+
+        <div class="faq-item">
+          <h2>4) Does Skinsera share my photos?</h2>
+          <p>No. Photos are processed to generate your score and are never shared with third parties.</p>
+        </div>
+
+        <div class="faq-item">
+          <h2>5) The app isn't working / I found a bug.</h2>
+          <p>Email <a href="mailto:hello@skinsera.app" style="color:#fff;">hello@skinsera.app</a> with your device model and iOS version so we can debug quickly.</p>
+        </div>
+
+        <div class="faq-item">
+          <h2>6) How do I cancel my subscription?</h2>
+          <p>Manage subscriptions in iPhone Settings → Apple ID → Subscriptions → Skinsera.</p>
+        </div>
+
+        <h2>Contact</h2>
+        <p>For support requests: <a href="mailto:hello@skinsera.app" style="color:#fff;">hello@skinsera.app</a></p>
+        <p style="margin-top:10px;"><a href="/" style="color:#fff;">← Back to Skinsera home</a></p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <a href="/" class="logo">SKINSERA</a>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="/privacy">Privacy</a>
+        <a href="/terms">Terms</a>
+        <a href="/support">Support</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>

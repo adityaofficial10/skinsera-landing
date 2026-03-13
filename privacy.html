@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Skinsera</title>
+  <meta name="description" content="Skinsera privacy policy: how we collect, process, store, and protect your skin tracking data." />
+  <style>
+    :root {
+      --bg: #0A0A0C;
+      --bg-elevated: #111114;
+      --bg-card: #16161A;
+      --accent: #E85A1B;
+      --text: #FFFFFF;
+      --text-muted: #9CA3AF;
+      --border: #27272A;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+    .container { width: min(900px, 92%); margin: 0 auto; }
+    nav { position: sticky; top: 0; background: rgba(10,10,12,0.85); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); }
+    .nav-inner { display:flex; justify-content:space-between; align-items:center; padding: 14px 0; }
+    .logo { color: var(--text); font-weight: 800; text-decoration:none; letter-spacing: 0.5px; }
+    .btn { background: var(--text); color: var(--bg); text-decoration:none; padding: 10px 16px; border-radius: 10px; font-weight: 600; }
+    main { padding: 56px 0 72px; }
+    h1 { font-size: clamp(2rem, 4vw, 2.6rem); margin-bottom: 10px; }
+    h2 { margin-top: 30px; margin-bottom: 10px; font-size: 1.25rem; }
+    p, li { color: var(--text-muted); }
+    ul { padding-left: 20px; }
+    .card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 24px; margin-top: 20px; }
+    footer { border-top: 1px solid var(--border); padding: 30px 0; }
+    .footer-inner { display:flex; justify-content:space-between; align-items:center; flex-wrap: wrap; gap: 14px; }
+    .footer-links { display:flex; gap: 20px; }
+    .footer-links a { color: var(--text-muted); text-decoration:none; }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="container nav-inner">
+      <a href="/" class="logo">SKINSERA</a>
+      <a href="/" class="btn">Back to Home</a>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container">
+      <h1>Privacy Policy</h1>
+      <p>Effective date: March 2026</p>
+
+      <div class="card">
+        <h2>What we collect</h2>
+        <ul>
+          <li>Daily face photos submitted by you for skin scoring.</li>
+          <li>AI-generated skin scores and trend history.</li>
+          <li>Lifestyle check-ins including sleep quality/hours, diet chips (dairy, sugar, junk, alcohol), and exercise status.</li>
+          <li>Derived insights and correlations used by Skinsera features (including weekly AI coaching summaries).</li>
+        </ul>
+
+        <h2>How photos are processed</h2>
+        <p>Skinsera processes photos to generate your skin score through on-device analysis and server-side scoring workflows. Photos are used only for scoring and service functionality. Photos are not shared with third parties and are not sold.</p>
+
+        <h2>How your data is stored</h2>
+        <p>Your logs, scores, and related account data are stored on your device and in Skinsera’s Supabase backend under your account. Backend access is controlled by Skinsera.</p>
+
+        <h2>No ads, no sale, no third-party sharing</h2>
+        <p>Skinsera does not sell personal data, does not run third-party advertising, and does not share your face photos with third parties.</p>
+
+        <h2>HealthKit (if enabled by you)</h2>
+        <p>If you choose to connect Apple HealthKit, Skinsera may read relevant sleep and exercise data only after your explicit permission. HealthKit access is optional and can be revoked at any time from iOS settings.</p>
+
+        <h2>Data deletion</h2>
+        <p>You can delete your account and associated data from within the app. Go to Settings → Account → Delete Account. Requested deletions are completed permanently, including backend records.</p>
+
+        <h2>Contact</h2>
+        <p>For privacy questions or requests, contact <a href="mailto:hello@skinsera.app" style="color:#fff;">hello@skinsera.app</a>.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <a href="/" class="logo">SKINSERA</a>
+      <nav class="footer-links" aria-label="Footer navigation">
+        <a href="/privacy">Privacy</a>
+        <a href="/terms">Terms</a>
+        <a href="/support">Support</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>

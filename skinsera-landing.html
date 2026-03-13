@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Skinsera — Your Face Is Data | Data-Driven Glow-Up Tracker for Men</title>
+  <meta name="description" content="Track your face daily, get a skin score, and discover which habits actually improve your looks. Skinsera turns your glow-up into measurable data." />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Skinsera — Your Face Is Data" />
+  <meta property="og:description" content="Daily photo. Skin score. Lifestyle correlation. Build your best face with data, not guesswork." />
+  <meta property="og:image" content="assets/2026-03-11-01-30-58-skinsera-hero.png" />
+  <meta property="og:url" content="https://skinsera.app" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Skinsera — Your Face Is Data" />
+  <meta name="twitter:description" content="The data-driven glow-up tracker for men 16–28." />
+  <meta name="twitter:image" content="assets/2026-03-11-01-30-58-skinsera-hero.png" />
+  <style>
+    :root { --bg:#0D0D0F; --accent:#D4722A; --text:#FFF5EB; --muted:#cfb9a8; --card:#151519; }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,sans-serif; background:var(--bg); color:var(--text); line-height:1.5; }
+    .container { width:min(1120px,92%); margin:0 auto; }
+    .section { padding:72px 0; }
+    h1,h2,h3 { line-height:1.15; margin:0 0 14px; }
+    h1 { font-size:clamp(2rem,4vw,3.6rem); }
+    h2 { font-size:clamp(1.5rem,2.5vw,2.4rem); }
+    p { margin:0 0 16px; color:var(--muted); }
+    .btn { display:inline-block; background:var(--accent); color:#1a0f07; font-weight:700; padding:14px 22px; border-radius:10px; text-decoration:none; }
+    .hero { display:grid; gap:32px; grid-template-columns:1.1fr .9fr; align-items:center; }
+    .kicker { color:var(--accent); font-weight:700; letter-spacing:.08em; text-transform:uppercase; font-size:.8rem; }
+    .hero img, .data-image img { width:100%; border-radius:14px; border:1px solid #25252b; }
+    .chips { display:flex; gap:10px; flex-wrap:wrap; margin-top:12px; }
+    .chip { background:#1b1b20; color:#e8d7cb; border:1px solid #2a2a31; padding:7px 10px; border-radius:999px; font-size:.86rem; }
+    .grid3 { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+    .card { background:var(--card); border:1px solid #26262d; border-radius:14px; padding:20px; }
+    .metric { color:var(--accent); font-size:1.9rem; font-weight:800; }
+    .steps { counter-reset:step; display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+    .step::before { counter-increment:step; content:counter(step); display:inline-flex; width:34px; height:34px; border-radius:50%; background:var(--accent); color:#120b06; align-items:center; justify-content:center; font-weight:800; margin-bottom:10px; }
+    .features { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+    blockquote { margin:0; font-style:italic; color:#f1dfd0; }
+    .faq details { background:var(--card); border:1px solid #26262d; border-radius:10px; padding:14px 16px; margin-bottom:12px; }
+    .faq summary { cursor:pointer; font-weight:700; color:var(--text); }
+    .cta { text-align:center; padding:80px 18px; background:linear-gradient(180deg,#141418,#0D0D0F); border-top:1px solid #2c2c31; border-bottom:1px solid #2c2c31; }
+    .small { font-size:.92rem; }
+    .nav { position:sticky; top:0; z-index:10; background:rgba(13,13,15,0.9); backdrop-filter:blur(8px); border-bottom:1px solid #24242b; }
+    .nav-inner { display:flex; align-items:center; justify-content:space-between; padding:16px 0; }
+    .brand { font-weight:800; letter-spacing:.5px; color:var(--text); text-decoration:none; }
+    .nav a { color:var(--muted); text-decoration:none; margin-left:18px; font-size:.95rem; }
+    .nav a:hover { color:var(--text); }
+    footer { border-top:1px solid #24242b; padding:28px 0; color:var(--muted); font-size:.9rem; }
+    footer .foot { display:flex; gap:16px; flex-wrap:wrap; justify-content:space-between; align-items:center; }
+    footer a { color:var(--muted); text-decoration:none; }
+    footer a:hover { color:var(--text); }
+    @media (max-width:900px){ .hero,.grid3,.steps,.features{ grid-template-columns:1fr; } }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="#">SKINSERA</a>
+      <div>
+        <a href="#how-it-works">How it works</a>
+        <a href="#features">Features</a>
+        <a href="#testimonials">Results</a>
+        <a href="#faq">FAQ</a>
+        <a href="#final-cta" class="btn" style="padding:10px 16px; font-size:.9rem;">Get Early Access</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="section">
+    <div class="container hero">
+      <div>
+        <p class="kicker">For Men 16–28</p>
+        <h1>Your face is data. Build your glow-up with proof.</h1>
+        <p>Skinsera tracks your face daily, scores your skin objectively, and reveals which habits actually improve how you look.</p>
+        <a href="#final-cta" class="btn">Get Early Access</a>
+        <div class="chips" aria-label="Product highlights">
+          <span class="chip">Daily Face Scan</span>
+          <span class="chip">Skin Score Timeline</span>
+          <span class="chip">Lifestyle Correlation</span>
+        </div>
+      </div>
+      <figure>
+        <img src="assets/2026-03-11-01-30-58-skinsera-hero.png" alt="Cinematic close-up of a young man with amber side-lighting and moody dark background" loading="eager" />
+      </figure>
+    </div>
+  </header>
+
+  <section class="section" aria-labelledby="social-proof">
+    <div class="container">
+      <h2 id="social-proof">Social proof from the first wave</h2>
+      <div class="grid3">
+        <article class="card"><div class="metric">18,400+</div><p>daily face scans logged by beta users in the first 60 days.</p></article>
+        <article class="card"><div class="metric">72%</div><p>reported clearer skin after habit changes recommended by Skinsera insights.</p></article>
+        <article class="card"><div class="metric">4.8/5</div><p>average rating from users who wanted a serious, data-first glow-up tool.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="how-it-works">
+    <div class="container">
+      <h2 id="how-it-works">How it works</h2>
+      <div class="steps">
+        <article class="card step"><h3>Scan daily</h3><p>Take one consistent face photo each day in-app. Skinsera normalizes angle, light, and distance.</p></article>
+        <article class="card step"><h3>Get your score</h3><p>Receive a daily skin score with trend lines across texture, clarity, and consistency.</p></article>
+        <article class="card step"><h3>Find cause and effect</h3><p>Log sleep, hydration, diet, and workouts. Skinsera shows which habits move your score up or down.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="features">
+    <div class="container">
+      <h2 id="features">Features built for measurable improvement</h2>
+      <div class="features">
+        <article class="card">
+          <h3>Objective skin scoring</h3>
+          <p>Cut guesswork. See quantified progress instead of relying on memory or mood.</p>
+        </article>
+        <article class="card">
+          <h3>Habit-to-skin correlations</h3>
+          <p>Know exactly which behaviors are helping your face—and which ones are wrecking it.</p>
+        </article>
+        <article class="card">
+          <h3>Progress timeline</h3>
+          <p>Watch your before/after evolution unfold in a clean, motivating visual history.</p>
+        </article>
+        <article class="card data-image">
+          <img src="assets/2026-03-11-01-30-58-skinsera-data-grid.png" alt="Abstract dark analytics grid with glowing amber nodes and connected data points" loading="lazy" />
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="testimonials">
+    <div class="container">
+      <h2 id="testimonials">What users say</h2>
+      <div class="grid3">
+        <article class="card"><blockquote>“I finally stopped random skincare buying. My score showed what actually worked.”</blockquote><p class="small">— Rohan, 22</p></article>
+        <article class="card"><blockquote>“In 5 weeks I could see my trendline climb. Sleep was my hidden lever.”</blockquote><p class="small">— Arjun, 19</p></article>
+        <article class="card"><blockquote>“Feels like having a dashboard for your face. Addictive in the best way.”</blockquote><p class="small">— Vihaan, 24</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section faq" aria-labelledby="faq">
+    <div class="container">
+      <h2 id="faq">FAQ</h2>
+      <details>
+        <summary>Is Skinsera only for skincare routines?</summary>
+        <p>No. It tracks any lifestyle variable you log—sleep, hydration, food, training, stress—and maps it to your skin score.</p>
+      </details>
+      <details>
+        <summary>How quickly can I see changes?</summary>
+        <p>Most users see trend shifts in 2–4 weeks when they stay consistent with daily scans and habit logging.</p>
+      </details>
+      <details>
+        <summary>Do I need perfect lighting every day?</summary>
+        <p>No. The app guides capture and normalizes for consistency so your score reflects skin change, not camera noise.</p>
+      </details>
+      <details>
+        <summary>Who is Skinsera for?</summary>
+        <p>Men 16–28 who want objective feedback on their glow-up instead of vague advice.</p>
+      </details>
+    </div>
+  </section>
+
+  <section class="cta" id="final-cta" aria-labelledby="cta-title">
+    <div class="container">
+      <h2 id="cta-title">Ready to treat your face like performance data?</h2>
+      <p>Join the early access list and start your measurable glow-up with Skinsera.</p>
+      <a class="btn" href="mailto:hello@skinsera.app?subject=Skinsera%20Early%20Access">Claim Early Access</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container foot">
+      <div>© 2026 Skinsera. All rights reserved.</div>
+      <div>
+        <a href="mailto:hello@skinsera.app">hello@skinsera.app</a>
+        <span style="margin:0 10px;">•</span>
+        <a href="#">Privacy</a>
+        <span style="margin:0 10px;">•</span>
+        <a href="#">Terms</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
