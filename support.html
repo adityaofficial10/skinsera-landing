@@ -3,11 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- SEO -->
   <title>Support — Skinsera</title>
-  <meta name="description" content="Skinsera support and FAQ." />
+  <meta name="description" content="Skinsera support, FAQ, and contact. Get help with the AI skin tracking app for iOS." />
+  <!-- Favicon -->
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32.png" />
   <link rel="icon" type="image/png" sizes="512x512" href="/assets/favicon.png" />
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
+  <!-- Canonical -->
+  <link rel="canonical" href="https://getskinsera.com/support" />
+  <link rel="alternate" hreflang="en" href="https://getskinsera.com/support" />
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
   <style>
     :root {
       --bg: #0A0A0C;
@@ -17,86 +26,394 @@
       --text: #FFFFFF;
       --text-muted: #9CA3AF;
       --border: #27272A;
+      --success: #22C55E;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
     .container { width: min(900px, 92%); margin: 0 auto; }
-    nav { position: sticky; top: 0; background: rgba(10,10,12,0.85); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); }
-    .nav-inner { display:flex; justify-content:space-between; align-items:center; padding: 14px 0; }
-    .logo { color: var(--text); font-weight: 800; text-decoration:none; letter-spacing: 0.5px; }
-    .btn { background: var(--text); color: var(--bg); text-decoration:none; padding: 10px 16px; border-radius: 10px; font-weight: 600; }
-    main { padding: 56px 0 72px; }
-    h1 { font-size: clamp(2rem, 4vw, 2.6rem); margin-bottom: 10px; }
-    h2 { margin-top: 26px; margin-bottom: 8px; font-size: 1.2rem; }
+    h1, h2, h3 { line-height: 1.2; font-weight: 700; }
+    h1 { font-size: clamp(2rem, 4vw, 2.6rem); letter-spacing: -0.01em; margin-bottom: 10px; }
+    h2 { margin-top: 0; margin-bottom: 8px; font-size: 1.15rem; }
+    .italic-accent {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-style: italic;
+      font-weight: 400;
+    }
     p { color: var(--text-muted); }
-    .card { background: var(--bg-card); border: 1px solid var(--border); border-radius: 16px; padding: 24px; margin-top: 20px; }
-    .faq-item { margin-bottom: 20px; }
-    footer { border-top: 1px solid var(--border); padding: 30px 0; }
-    .footer-inner { display:flex; justify-content:space-between; align-items:center; flex-wrap: wrap; gap: 14px; }
-    .footer-links { display:flex; gap: 20px; }
-    .footer-links a { color: var(--text-muted); text-decoration:none; }
+    a { color: var(--text); text-decoration: none; transition: color 0.2s; }
+    a:hover { color: var(--accent); }
+
+    /* Nav */
+    nav {
+      position: sticky;
+      top: 0;
+      background: rgba(10, 10, 12, 0.85);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+      z-index: 100;
+    }
+    .nav-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 0;
+    }
+    .logo {
+      color: var(--text);
+      font-weight: 800;
+      text-decoration: none;
+      letter-spacing: 0.5px;
+      font-size: 1.2rem;
+    }
+    .logo-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .logo-header img {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+    }
+    .btn {
+      background: var(--text);
+      color: var(--bg);
+      text-decoration: none;
+      padding: 10px 18px;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: all 0.2s ease;
+    }
+    .btn:hover {
+      background: #E5E5E5;
+      color: var(--bg);
+      transform: translateY(-1px);
+    }
+
+    /* Main */
+    main { padding: 56px 0 72px; }
+
+    /* Brand header on support page */
+    .support-hero {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+    .support-hero .app-icon {
+      width: 80px;
+      height: 80px;
+      border-radius: 18px;
+      margin-bottom: 20px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+    }
+    .support-hero h1 span { color: var(--accent); }
+    .support-hero > p {
+      font-size: 1.05rem;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    /* Cards */
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px;
+      margin-bottom: 24px;
+    }
+    .card-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    /* FAQ accordion */
+    .faq-item {
+      border-bottom: 1px solid var(--border);
+    }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-question {
+      width: 100%;
+      background: none;
+      border: none;
+      color: var(--text);
+      font-size: 1rem;
+      font-weight: 600;
+      font-family: inherit;
+      padding: 18px 40px 18px 0;
+      text-align: left;
+      cursor: pointer;
+      position: relative;
+      transition: color 0.2s;
+      line-height: 1.4;
+    }
+    .faq-question:hover { color: var(--accent); }
+    .faq-question::after {
+      content: '+';
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 1.4rem;
+      font-weight: 300;
+      color: var(--accent);
+      transition: transform 0.3s ease;
+    }
+    .faq-item.open .faq-question::after {
+      content: '−';
+    }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease, padding 0.35s ease;
+    }
+    .faq-item.open .faq-answer {
+      max-height: 500px;
+      padding-bottom: 18px;
+    }
+    .faq-answer p {
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+    .faq-answer a {
+      color: var(--accent);
+      text-decoration: underline;
+    }
+    .faq-answer a:hover { color: #F97316; }
+
+    /* Contact box */
+    .contact-box {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 20px 24px;
+      background: rgba(232, 90, 27, 0.08);
+      border: 1px solid rgba(232, 90, 27, 0.2);
+      border-radius: 12px;
+      margin-top: 16px;
+    }
+    .contact-box .icon {
+      font-size: 2rem;
+    }
+    .contact-box .email-link {
+      color: var(--text);
+      font-weight: 600;
+      font-size: 1.05rem;
+    }
+    .contact-box .email-sub {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    /* Bug report */
+    .bug-report {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--bg-elevated);
+      border: 1px solid var(--border);
+      padding: 14px 24px;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: all 0.2s ease;
+    }
+    .bug-report:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      transform: translateY(-1px);
+    }
+
+    /* Disclaimer */
+    .disclaimer {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      padding: 16px 20px;
+      background: var(--bg-elevated);
+      border-left: 3px solid var(--accent);
+      border-radius: 0 10px 10px 0;
+      margin-top: 16px;
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 30px 0;
+    }
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+    .footer-links { display: flex; gap: 20px; }
+    .footer-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+    .footer-links a:hover { color: var(--text); }
+    .footer-copy {
+      color: var(--text-muted);
+      font-size: 0.85rem;
+    }
+
+    /* Mobile */
+    @media (max-width: 600px) {
+      main { padding: 40px 0 48px; }
+      .card { padding: 20px; }
+      .faq-question { font-size: 0.95rem; }
+      .footer-inner { flex-direction: column; text-align: center; }
+    }
   </style>
 </head>
 <body>
   <nav>
     <div class="container nav-inner">
-      <a href="/" class="logo">SKINSERA</a>
-      <a href="/" class="btn">Back to Home</a>
+      <a href="https://getskinsera.com" class="logo-header">
+        <img src="/assets/apple-touch-icon.png" alt="Skinsera app icon" width="32" height="32" />
+        <span class="logo">SKINSERA</span>
+      </a>
+      <a href="https://getskinsera.com" class="btn">Back to Home</a>
     </div>
   </nav>
 
   <main>
     <div class="container">
-      <h1>Support</h1>
-      <p>Need help with Skinsera? Start with these FAQs.</p>
+      <!-- Page hero -->
+      <div class="support-hero">
+        <img class="app-icon" src="/assets/apple-touch-icon.png" alt="Skinsera app icon" width="80" height="80" />
+        <h1>Support &amp; <span class="italic-accent">FAQ</span></h1>
+        <p>Everything you need to know about using Skinsera — the AI-powered <span class="italic-accent">lookmaxxing tracker</span> for men.</p>
+      </div>
 
+      <!-- Contact Us -->
       <div class="card">
+        <div class="card-title">✉️ Contact Us</div>
+        <p>Got a question, feedback, or need help? Reach out — we read every message.</p>
+        <div class="contact-box">
+          <span class="icon">📩</span>
+          <div>
+            <a href="mailto:support@getskinsera.com" class="email-link">support@getskinsera.com</a>
+            <div class="email-sub">We typically respond within 24–48 hours</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ -->
+      <div class="card">
+        <div class="card-title">🙋 Frequently Asked Questions</div>
+
         <div class="faq-item">
-          <h2>1) How does the skin score work?</h2>
-          <p>Skinsera’s AI analyzes your daily photo across five zones: texture, clarity, oiliness, redness, and consistency. Your score is on a 0–100 scale, and a lower score means better skin.</p>
+          <button class="faq-question" onclick="toggleFaq(this)">What is Skinsera?</button>
+          <div class="faq-answer">
+            <p>Skinsera is a <strong>lookmaxxing tracking app for men</strong> on iOS. It helps you track your skin, habits, and self-care routine over time using AI-assisted scoring. Think of it as a data dashboard for your glow-up journey — so you can finally see what's working and what's not.</p>
+          </div>
         </div>
 
         <div class="faq-item">
-          <h2>2) Why does my score go up sometimes?</h2>
-          <p>Scores can fluctuate due to lighting, natural skin changes, and lifestyle variation. Focus on your trend over 2+ weeks instead of day-to-day movement.</p>
+          <button class="faq-question" onclick="toggleFaq(this)">How does the AI skin analysis work?</button>
+          <div class="faq-answer">
+            <p>Every morning, take a quick selfie in the app. Our AI analyzes your photo and assigns a <strong>skin score from 0–100</strong> based on texture, clarity, consistency, and more. A <strong>lower score means better skin</strong>. Over time you'll see trends, correlations with habits (like sleep or diet), and weekly AI-generated coaching summaries. The whole process takes under 15 seconds.</p>
+          </div>
         </div>
 
         <div class="faq-item">
-          <h2>3) How do I delete my data?</h2>
-          <p>In the app, go to Settings → Account → Delete Account. All data is permanently deleted within 30 days.</p>
+          <button class="faq-question" onclick="toggleFaq(this)">Is my data safe?</button>
+          <div class="faq-answer">
+            <p>Yes. Your photos are encrypted in transit and processed only to generate your skin score. We <strong>do not sell, share, or use your data for advertising or marketing</strong>. Photos may be processed by our contracted infrastructure and AI providers acting on our behalf — they are prohibited from using them for model training. You can delete your account and all data at any time from within the app. Read our full <a href="https://getskinsera.com/privacy">Privacy Policy</a> for details.</p>
+          </div>
         </div>
 
         <div class="faq-item">
-          <h2>4) Does Skinsera share my photos?</h2>
-          <p>No. Photos are processed to generate your score and are never shared with third parties.</p>
+          <button class="faq-question" onclick="toggleFaq(this)">How do I cancel my subscription?</button>
+          <div class="faq-answer">
+            <p>Skinsera subscriptions are managed through Apple. To cancel:</p>
+            <p style="margin-top: 8px;"><strong>Open Settings on your iPhone → Tap your Apple ID → Subscriptions → Find Skinsera → Cancel Subscription.</strong></p>
+            <p style="margin-top: 8px;">Make sure to cancel at least 24 hours before your trial or billing period ends to avoid being charged.</p>
+          </div>
         </div>
 
         <div class="faq-item">
-          <h2>5) The app isn't working / I found a bug.</h2>
-          <p>Email <a href="mailto:hello@skinsera.app" style="color:#fff;">hello@skinsera.app</a> with your device model and iOS version so we can debug quickly.</p>
+          <button class="faq-question" onclick="toggleFaq(this)">Does Skinsera replace a dermatologist?</button>
+          <div class="faq-answer">
+            <p><strong>No — absolutely not.</strong> Skinsera is designed for cosmetic and self-tracking purposes only. It does not diagnose, treat, or provide medical advice of any kind. Our AI scores are for tracking trends in your routine, not for clinical assessment.</p>
+            <div class="disclaimer">
+              ⚠️ <strong>Medical Disclaimer:</strong> Always consult a qualified healthcare provider or licensed dermatologist for skin concerns. Never ignore or delay professional medical advice because of information or scores provided by Skinsera.
+            </div>
+          </div>
         </div>
 
         <div class="faq-item">
-          <h2>6) How do I cancel my subscription?</h2>
-          <p>Manage subscriptions in iPhone Settings → Apple ID → Subscriptions → Skinsera.</p>
+          <button class="faq-question" onclick="toggleFaq(this)">Can I delete my account and data?</button>
+          <div class="faq-answer">
+            <p>Yes. Go to <strong>Settings → Account → Delete Account</strong> inside the app. All of your data — photos, scores, logs — is permanently deleted from our servers. No hard feelings.</p>
+          </div>
         </div>
 
-        <h2>Contact</h2>
-        <p>For support requests: <a href="mailto:hello@skinsera.app" style="color:#fff;">hello@skinsera.app</a></p>
-        <p style="margin-top:10px;"><a href="/" style="color:#fff;">← Back to Skinsera home</a></p>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">Why does my skin score fluctuate day to day?</button>
+          <div class="faq-answer">
+            <p>Fluctuations are completely normal. Lighting conditions, natural skin changes, hydration, and daily lifestyle variation all affect your score. Focus on the <strong>weekly and monthly trend</strong>, not individual day-to-day changes. The trend tells the real story.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Report a Bug -->
+      <div class="card">
+        <div class="card-title">🐛 Report a Bug</div>
+        <p>Found something that's broken or not working right? We'd love to fix it.</p>
+        <a class="bug-report" href="mailto:support@getskinsera.com?subject=Bug%20Report&body=Device%3A%0iOS%20Version%3A%0ASkinsera%20Version%3A%0ADescription%3A%0ASteps%20to%20Reproduce%3A%0AScreenshots%3A" style="margin-top: 16px; display: inline-flex;">
+          🐞 Email Us a Bug Report
+        </a>
+        <p style="font-size: 0.85rem; margin-top: 12px;">Include your device model and iOS version so we can track it down faster.</p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="card" style="text-align:center;">
+        <p style="margin-bottom:16px;">Other helpful links:</p>
+        <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap;">
+          <a href="https://getskinsera.com/privacy" class="btn">Privacy Policy</a>
+          <a href="https://getskinsera.com/terms" class="btn">Terms of Service</a>
+          <a href="https://getskinsera.com" class="btn">Download Skinsera</a>
+        </div>
       </div>
     </div>
   </main>
 
   <footer>
     <div class="container footer-inner">
-      <a href="/" class="logo">SKINSERA</a>
+      <a href="https://getskinsera.com" class="logo">SKINSERA</a>
       <nav class="footer-links" aria-label="Footer navigation">
-        <a href="/privacy">Privacy</a>
-        <a href="/terms">Terms</a>
-        <a href="/support">Support</a>
+        <a href="https://getskinsera.com/privacy">Privacy</a>
+        <a href="https://getskinsera.com/terms">Terms</a>
+        <a href="https://getskinsera.com/support">Support</a>
       </nav>
+      <div class="footer-copy">© 2026 Skinsera. All rights reserved.</div>
     </div>
   </footer>
+
+  <script>
+    function toggleFaq(btn) {
+      const item = btn.parentElement;
+      const isOpen = item.classList.contains('open');
+      // Close all
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      // Toggle clicked
+      if (!isOpen) item.classList.add('open');
+    }
+  </script>
 </body>
 </html>
